@@ -6,9 +6,42 @@
 \footcite[]{smith2010wealth}
 
 \begin{wrapfigure}{l}{0.4\textwidth}
-  \centering
-  \includegraphics[width=0.35\textwidth]{threepwood.png}
-  \caption{The Greatest Pirate in the World}\label{fig:threepwood}
+	\centering
+	\includegraphics[width=0.35\textwidth]{threepwood.png}
+	\caption{The Greatest Pirate in the World}\label{fig:threepwood}
 \end{wrapfigure}
 
 \blindtext[2]
+
+\section{Test Section}
+
+This is a test of the minted package for code listings:
+
+\begin{listing}[htbp]
+	\centering
+	\begin{minted}{python}
+def hello_world():
+    """A simple function that prints hello world."""
+    message = "Hello, World!"
+    print(message)
+    return message
+
+if __name__ == "__main__":
+    hello_world()
+  \end{minted}
+	\caption{Example Python code listing}\label{listing:hello-world}
+\end{listing}
+
+\blindtext
+
+\section{Test Section C}
+
+This is a test of the minted package for external C code listings:
+
+\begin{listing}[htbp]
+	\centering
+	\inputminted{c}{assets/src/factorial.c}
+	\caption{Example C code listing}\label{listing:factorial}
+\end{listing}
+
+\blindtext

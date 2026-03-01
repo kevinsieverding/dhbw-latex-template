@@ -24,3 +24,8 @@ _minted-index
 # Local Output
 *.pdf
 !assets/img/*.pdf
+_minted
+
+# Misc
+*.bak*
+

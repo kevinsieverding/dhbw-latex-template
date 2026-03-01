@@ -40,20 +40,23 @@
 % bibliography support
 \usepackage[
   backend=biber,
-  style=authoryear,
+  % style=apa,
+  bibstyle=apa,
+  citestyle=authoryear-comp,
   labeldate=year,
   sortcites=true,
   sorting=nyt,
   block=space,
   maxnames=2,
-  minnames=1
+  minnames=1,
+  urldate=iso,
 ]{biblatex}
 
 % glossaries and acronyms
 \usepackage[
     acronym,
     toc=true,
-]{glossaries}
+]{glossaries-prefix}
 
 % FORMATTING
 
@@ -83,8 +86,19 @@
 
 % MISC
 
+% symbols
+\usepackage{amssymb}
+
+% extended support for tables
+\usepackage{tabu}
+% better tables
+\usepackage{booktabs}
+
 % useful blindtext in document language
 \usepackage{blindtext}
 
 % support for placing todo notes in margins
 \usepackage[obeyFinal,color=Red,textsize=tiny]{todonotes}
+
+% support for modifying enumeration environments
+\usepackage{enumitem}

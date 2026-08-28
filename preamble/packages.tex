@@ -11,25 +11,11 @@
 % language support
 \usepackage[american]{babel}
 
-% advanced support for quotations
-\usepackage[
-  autostyle % adapt quote style to document language
-]{csquotes}
-
 % color support
-\usepackage[dvipsnames,table,hyperref,fixinclude]{xcolor}
+\usepackage[dvipsnames,table,fixinclude]{xcolor}
 
 % graphics support
-\usepackage[]{graphicx}
-
-% extend file name support for graphicx package
-\usepackage[
-  extendedchars,
-  encoding,
-  multidot,
-  space,
-  filenameencoding=utf8,
-]{grffile}
+\usepackage{graphicx}
 
 % hyperlink support
 \usepackage[
@@ -81,7 +67,12 @@
 % support for code listings
 \usepackage{minted}
 
-% wrapt text around figures
+% advanced support for quotations — must load after minted (fvextra/lineno)
+\usepackage[
+  autostyle % adapt quote style to document language
+]{csquotes}
+
+% wrap text around figures
 \usepackage{wrapfig}
 
 % MISC
@@ -89,8 +80,8 @@
 % symbols
 \usepackage{amssymb}
 
-% extended support for tables
-\usepackage{tabu}
+% modern table environment (replaces unmaintained tabu)
+\usepackage{tabularray}
 % better tables
 \usepackage{booktabs}
 
@@ -100,5 +91,3 @@
 % support for placing todo notes in margins
 \usepackage[obeyFinal,color=Red,textsize=tiny]{todonotes}
 
-% support for modifying enumeration environments
-\usepackage{enumitem}
